@@ -35,4 +35,22 @@ canvas = Canvas(root, width=windowWidth, height=windowHeight)
 canvas.pack(fill="both", expand=True)
 canvas.bind('<Configure>', resize_image)
 
+# add the heading
+head = Frame(root,bg="yellow",bd=5)
+head.place(relx=0.2,rely=0.1,relwidth=0.6,relheight=0.16)
+headLabel = Label(head, text="Welcome to the Library", bg='black', fg='white', font=('Courier',20))
+headLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
+
+# adding the buttons
+b1 = Button(root, text="Add Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
+b1.place(relx=0.28, rely=0.4, relwidth=0.45, relheight=0.1)
+b2 = Button(root, text="Delete Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
+b2.place(relx=0.28, rely=0.5, relwidth=0.45, relheight=0.1)
+b3 = Button(root, text="View Books", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
+b3.place(relx=0.28, rely=0.6, relwidth=0.45, relheight=0.1)
+b4 = Button(root, text="Issue Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
+b4.place(relx=0.28, rely=0.7, relwidth=0.45, relheight=0.1)
+b5 = Button(root, text="Return Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
+b5.place(relx=0.28, rely=0.8, relwidth=0.45, relheight=0.1)
+
 root.mainloop()
