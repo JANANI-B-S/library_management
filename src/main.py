@@ -4,17 +4,18 @@ import PIL
 from tkinter import *
 from tkinter import Canvas
 import PIL
-import mysql_connector
 from PIL import ImageTk, Image
 from addBook import *
+from viewBook import *
 
 # Designing the window
 root = Tk()
 img = PhotoImage(file="bit.png")
+root.iconphoto(False,img)
 root.title("Library")
 root.minsize(width=400, height=400)
 root.geometry("1020x735")
-root.iconphoto(False,img)
+
 
 # Add Background Image
 bg = Image.open("Lib.jpg")
@@ -47,7 +48,7 @@ b1 = Button(root, text="Add Book", bg='black', activebackground='#e7e7e7', fg='w
 b1.place(relx=0.28, rely=0.4, relwidth=0.45, relheight=0.1)
 b2 = Button(root, text="Delete Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
 b2.place(relx=0.28, rely=0.5, relwidth=0.45, relheight=0.1)
-b3 = Button(root, text="View Books", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
+b3 = Button(root, text="View Books", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16),command=View)
 b3.place(relx=0.28, rely=0.6, relwidth=0.45, relheight=0.1)
 b4 = Button(root, text="Issue Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
 b4.place(relx=0.28, rely=0.7, relwidth=0.45, relheight=0.1)
