@@ -6,6 +6,7 @@ from tkinter import Canvas
 import PIL
 import mysql_connector
 from PIL import ImageTk, Image
+from addBook import *
 
 # Designing the window
 root = Tk()
@@ -42,7 +43,7 @@ headLabel = Label(head, text="Welcome to the Library", bg='black', fg='white', f
 headLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
 
 # adding the buttons
-b1 = Button(root, text="Add Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
+b1 = Button(root, text="Add Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16),command=addBook)
 b1.place(relx=0.28, rely=0.4, relwidth=0.45, relheight=0.1)
 b2 = Button(root, text="Delete Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
 b2.place(relx=0.28, rely=0.5, relwidth=0.45, relheight=0.1)
