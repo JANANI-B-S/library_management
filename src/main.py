@@ -7,6 +7,8 @@ import PIL
 from PIL import ImageTk, Image
 from addBook import *
 from viewBook import *
+from issue import *
+from delete import *
 
 # Designing the window
 root = Tk()
@@ -46,11 +48,11 @@ headLabel.place(relx=0,rely=0, relwidth=1, relheight=1)
 # adding the buttons
 b1 = Button(root, text="Add Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16),command=addBook)
 b1.place(relx=0.28, rely=0.4, relwidth=0.45, relheight=0.1)
-b2 = Button(root, text="Delete Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
+b2 = Button(root, text="Delete Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16),command=delete)
 b2.place(relx=0.28, rely=0.5, relwidth=0.45, relheight=0.1)
 b3 = Button(root, text="View Books", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16),command=View)
 b3.place(relx=0.28, rely=0.6, relwidth=0.45, relheight=0.1)
-b4 = Button(root, text="Issue Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
+b4 = Button(root, text="Issue Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16),command=issue)
 b4.place(relx=0.28, rely=0.7, relwidth=0.45, relheight=0.1)
 b5 = Button(root, text="Return Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
 b5.place(relx=0.28, rely=0.8, relwidth=0.45, relheight=0.1)
