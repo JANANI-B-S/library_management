@@ -36,7 +36,8 @@ def View():
     try:
         cur.execute(getBooks)
         sql.con.commit()
-        for i in cur:
+        result = cur.fetchall()
+        for i in result:
             Label(labelFrame, text="%-10s%-30s%-20s%-10s" % (i[0], i[1], i[2], i[3]), bg='black', fg='white',font=('Courier New', 11)).place(
                 relx=0.07, rely=y)
             y += 0.1
