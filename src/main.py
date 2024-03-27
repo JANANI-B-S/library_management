@@ -1,3 +1,8 @@
+from addBook import *
+from viewBook import *
+from issue import *
+from delete import *
+from returnbook import *
 from tkinter import *
 from tkinter import Canvas
 import PIL
@@ -5,10 +10,6 @@ from tkinter import *
 from tkinter import Canvas
 import PIL
 from PIL import ImageTk, Image
-from addBook import *
-from viewBook import *
-from issue import *
-from delete import *
 
 # Designing the window
 root = Tk()
@@ -54,7 +55,7 @@ b3 = Button(root, text="View Books", bg='black', activebackground='#e7e7e7', fg=
 b3.place(relx=0.28, rely=0.6, relwidth=0.45, relheight=0.1)
 b4 = Button(root, text="Issue Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16),command=issue)
 b4.place(relx=0.28, rely=0.7, relwidth=0.45, relheight=0.1)
-b5 = Button(root, text="Return Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16))
+b5 = Button(root, text="Return Book", bg='black', activebackground='#e7e7e7', fg='white', font=('Courier New', 16),command=returnBook)
 b5.place(relx=0.28, rely=0.8, relwidth=0.45, relheight=0.1)
 
 root.mainloop()

@@ -37,7 +37,7 @@ def issue():
     root.geometry("1020x735")
 
     Canvas1 = Canvas(root)
-    Canvas1.config(bg="blue")
+    Canvas1.config(bg="magenta")
     Canvas1.pack(expand=True, fill="both")
 
     headingFrame1 = Frame(root,bg="Yellow",bd=5)
