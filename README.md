@@ -17,9 +17,8 @@ This project is a Library Management System (LBMS) implemented in Python. It ser
 
 Note: The exe file that I have committed may not work for you. To run the program as an exe:
 - Open the project in an IDE(preferably pyCharm) and make sure you have venv directory containing all the dependencies.
-- Install pyinstaller by using the command `pip install pyinstaller`.
-- Execute the command `pyinstaller.exe --onefile --noconsole --paths=Library-Management-System\venv\Lib\site-packages --icon=bit
-.ico main.py`
+- Install pyinstaller by using the command `pip install pyinstaller`
+- Execute the command `pyinstaller.exe --onefile --noconsole --paths=Library-Management-System\venv\Lib\site-packages --icon=bit.ico main.py`
 - Look for the application named `main` in the dist folder and your exe file is ready.
 
 ## Usage
