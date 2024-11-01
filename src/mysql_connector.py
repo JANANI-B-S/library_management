@@ -1,14 +1,16 @@
-import mysql.connector as ms;
+import mysql.connector as ms
+from tkinter import messagebox
 
-con = ms.connect(
-    host="localhost",
-    user="root",
-    database="lbms",  # name your database here
-    passwd="1502"  # enter your mysql passwd here
-)
+def connect_db():
+    try:
+        con = ms.connect(
+            host="localhost",   # Update with your MySQL host
+            user="root",        # Update with your MySQL username
+            password="janani",  # Update with your MySQL password
+            database="library_db"  # Update with your MySQL database
+        )
+        return con
+    except ms.Error as err:
+        messagebox.showinfo('Error', f"Error connecting to the database: {err}")
+        return None
 
-
-if con.is_connected():
-    print("database connected")
-else:
-    print("connection unsuccessful")
